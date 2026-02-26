@@ -1,0 +1,32 @@
+﻿@model List<Person>
+
+	<a asp-action="Create" class="btn btn-outline-success">Add Person</a>
+
+<table class="table table-bordered table-dark table-striped table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>DateOfBirth</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var person in Model)
+		{
+			<tr>
+				<td>@person.Id</td>
+				<td>@person.Name</td>
+				<td>@person.DateOfBirth.ToString("dd MMMM yyyy")</td>
+				<td>@person.Gender</td>
+				<td>@person.Age</td>
+				<td>
+					<a asp-action="Update" asp-route-id="@person.Id" class="btn btn-warning">Edit</a>
+					<a asp-action="Delete" asp-route-id="@person.Id" class="btn btn-danger">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

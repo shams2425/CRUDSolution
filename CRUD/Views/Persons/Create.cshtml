@@ -1,0 +1,26 @@
+﻿@model Person 
+
+<h3>Add Person</h3>
+
+<form method="post">
+	
+	<div>
+		<label>Name</label>
+		<input asp-for="Name" />
+	</div>
+	<div>
+		<label>DateOfBirth</label>
+		<input asp-for="DateOfBirth" />
+	</div>
+	<div>
+		<label>Gender</label>
+		<input asp-for="Gender" />
+	</div>
+	<div>
+		<label>Age</label>
+		<input asp-for="Age" />
+	</div>
+	<button type="submit" class="btn btn-success">Submit</button>
+	<a asp-action="Index" class="btn btn-primary">Back</a>
+</form>
+

@@ -1,0 +1,12 @@
+﻿@model Person
+
+<h5>Are you you want to delete?</h5>
+
+<p>@Model.Name | @Model.Gender</p>
+
+<form method="post" asp-action="DeleteConfirm">
+	
+	<input type="hidden"  asp-for="Id"/>
+	<button type="submit" class="btn btn-danger">Delete</button>
+	<a asp-action="Index" class="btn btn-success">Cancel</a>
+</form>
